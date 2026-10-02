@@ -15,6 +15,8 @@ using namespace std;
 
 int main(int argc, char **argv) {
 
+   string    end;
+	
    while (end != "done"){
 	
    const int DEFAULT_NUMBER_OF_ROUNDS = 15;
@@ -25,7 +27,7 @@ int main(int argc, char **argv) {
    if (argc == 2) {
       numRounds = strlen(argv[1]);
    }
-   string    end;
+	   
    string    s;                         // A string used to pause the game
    string    c;                         // The player's typed characters
    char     *seq = new char[numRounds]; // Sequence of numRounds colors to match

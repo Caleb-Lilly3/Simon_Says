@@ -15,6 +15,8 @@ using namespace std;
 
 int main(int argc, char **argv) {
 
+   while (end != "done"){
+	
    const int DEFAULT_NUMBER_OF_ROUNDS = 15;
    int       numRounds = DEFAULT_NUMBER_OF_ROUNDS;
 
@@ -31,7 +33,6 @@ int main(int argc, char **argv) {
    bool      lost = false;              // Indicates whether we win or lose
    int       round;                     // Indicates the current round
 
-   while (end != "done"){
    // Initialize random number generator
    srand(time(0));
 

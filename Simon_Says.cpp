@@ -23,7 +23,7 @@ int main(int argc, char **argv) {
    if (argc == 2) {
       numRounds = strlen(argv[1]);
    }
-
+   string    end;
    string    s;                         // A string used to pause the game
    string    c;                         // The player's typed characters
    char     *seq = new char[numRounds]; // Sequence of numRounds colors to match
@@ -31,6 +31,7 @@ int main(int argc, char **argv) {
    bool      lost = false;              // Indicates whether we win or lose
    int       round;                     // Indicates the current round
 
+   while (end != done){
    // Initialize random number generator
    srand(time(0));
 
@@ -73,6 +74,7 @@ int main(int argc, char **argv) {
 	cout << endl << "Aww, you lost." << endl;
 	cout << "The correct sequence was: " << s << endl;
 	}
-
+	cin >> end;
+	}
    return 0;
 }

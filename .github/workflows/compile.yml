@@ -25,7 +25,7 @@ jobs:
       shell: msys2 {0}
       run: |
         # Replace 'main.cpp' with your file name, and 'my_program.exe' with your desired output name
-        g++ Simon_Says.cpp -o Simon_Says.exe
+        g++ Simon_Says.cpp -o Simon_Says.exe -static
 
     - name: Upload Executable Artifact
       uses: actions/upload-artifact@v4

@@ -1,0 +1,34 @@
+name: Compile C++ to EXE
+
+on:
+  push:
+    branches: [ "main" ] # Runs every time you push to the main branch
+  pull_request:
+    branches: [ "main" ]
+  workflow_dispatch: # Allows you to run this manually from the Actions tab
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - name: Checkout repository code
+      uses: actions/checkout@v4
+
+    - name: Set up GCC (MinGW)
+      uses: msys2/setup-msys2@v2
+      with:
+        update: true
+        install: mingw-w64-x86_64-gcc
+
+    - name: Compile C++ Code
+      shell: msys2 {0}
+      run: |
+        # Replace 'main.cpp' with your file name, and 'my_program.exe' with your desired output name
+        g++ Simon_Says.cpp -o Simon_Says.exe
+
+    - name: Upload Executable Artifact
+      uses: actions/upload-artifact@v4
+      with:
+        name: Compiled-Windows-EXE
+        path: Simon_Says.exe

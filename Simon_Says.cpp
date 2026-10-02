@@ -31,7 +31,7 @@ int main(int argc, char **argv) {
    bool      lost = false;              // Indicates whether we win or lose
    int       round;                     // Indicates the current round
 
-   while (end != done){
+   while (end != "done"){
    // Initialize random number generator
    srand(time(0));
 
@@ -74,6 +74,9 @@ int main(int argc, char **argv) {
 	cout << endl << "Aww, you lost." << endl;
 	cout << "The correct sequence was: " << s << endl;
 	}
+
+	sleep(1)
+	cout << "Type start to play again or type done to close the program"
 	cin >> end;
 	}
    return 0;

@@ -49,7 +49,7 @@ int main(int argc, char **argv) {
 	//loops the program for a set number of rounds or untill player loses
 	for (int i = 0; (i < numRounds) && (lost != true); ++i){
 		s = s + seq[i];                   //creats a string using seq[num]
-		system(string("clear"));          //clears screen
+		system("clear");          //clears screen
 		cout << "Simon says: " << flush;
 		for(int j = 0; j <= i; ++j){
 			cout << seq[j] << flush;

@@ -10,7 +10,6 @@
 #include <cstring>                      // for strlen()
 #include <cstdlib>                      // for random numbers
 #include <unistd.h>                     // for sleep()
-#include "ZyLab.h"                      // for ZyLab Setup
 
 using namespace std;
 

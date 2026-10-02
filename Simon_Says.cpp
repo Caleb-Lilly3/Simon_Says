@@ -79,7 +79,7 @@ int main(int argc, char **argv) {
 	}
 
 	sleep(1);
-	cout << "Type start to play again or type done to close the program";
+	cout << "Type start to play again or type done to close the program" << endl;
 	cin >> end;
 	}
    return 0;

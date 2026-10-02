@@ -75,8 +75,8 @@ int main(int argc, char **argv) {
 	cout << "The correct sequence was: " << s << endl;
 	}
 
-	sleep(1)
-	cout << "Type start to play again or type done to close the program"
+	sleep(1);
+	cout << "Type start to play again or type done to close the program";
 	cin >> end;
 	}
    return 0;
